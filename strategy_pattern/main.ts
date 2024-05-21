@@ -50,6 +50,8 @@ const obj = new Context(plan1);
 const businessData: string[] = ['a', 'b', 'c', 'd']
 
 obj.businessLogic(businessData);
+
+// ability to change the strategy dynamically 
 obj.plan = plan2;
 obj.businessLogic(businessData);
 
