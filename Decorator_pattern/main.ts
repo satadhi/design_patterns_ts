@@ -1,3 +1,5 @@
+// This is about making complex rice with a fix base rich
+
 interface IRiceMaker {
     
     cook(): string;
@@ -45,8 +47,8 @@ class ChickenRiceMaker extends RiceDecorator {
      * calling the wrapped object directly. This approach simplifies extension
      * of decorator classes.
      */
-    public operation(): string {
-        return `${super.cook()} + chicken`;
+    public cook(): string {
+        return `${super.cook()} + Chicken`;
     }
 }
 
@@ -55,9 +57,7 @@ class ChickenRiceMaker extends RiceDecorator {
  * wrapped object.
  */
 class JiraRickMaker extends RiceDecorator{
-    public operation(): string {
-
-        console.log("inside JiraRickMaker/cook", super.cook());
+    public cook(): string {
         return `${super.cook()} + Jira`;
     }
 }
@@ -92,4 +92,4 @@ console.log('');
 const decorator1 = new JiraRickMaker(simple);
 const decorator2 = new ChickenRiceMaker(decorator1);
 console.log('Client: Now I\'ve got a decorated component:');
-clientCode(decorator1);
+clientCode(decorator2);
