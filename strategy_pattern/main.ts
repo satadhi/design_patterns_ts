@@ -45,6 +45,7 @@ class Context {
 const plan1 = new RealStrategyA();
 const plan2 = new RealStrategyB();
 
+// dependency injection ?
 const obj = new Context(plan1);
 
 const businessData: string[] = ['a', 'b', 'c', 'd']
