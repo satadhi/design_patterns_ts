@@ -1,3 +1,5 @@
+
+// So what it mean is; in our case a blueprint of strategy should look like the below interface
 interface Strategy {
     doSomeThing(data: string[]): string[];
 
@@ -5,7 +7,7 @@ interface Strategy {
 
 class RealStrategyA implements Strategy {
     public doSomeThing(data: string[]):string[] {
-        return data.sort();
+        return data.sort(); // the action is sort; !important only sort() does lexical order sorting; so do add callback if you want to sort number and stuff
     }
 }
 
@@ -33,6 +35,7 @@ class Context {
 
     public businessLogic(data:string[]) {
 
+        // its important to note that the Context knows about Strategy; so basically strategy is an abstruction of a logic
         console.log("after using business logic do the answer is \n", this.str.doSomeThing(data))
 
     }
