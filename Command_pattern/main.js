@@ -88,3 +88,14 @@ class AddThenMultiplyCommand {
     return this.addCommand.undo(newValue)
   }
 }
+
+
+
+const addc = new AddCommand(10);
+const mac =new Calculator();
+
+mac.executeCommand(addc)
+console.log(mac.value)
+
+
+
