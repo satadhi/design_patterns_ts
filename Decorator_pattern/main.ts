@@ -1,17 +1,26 @@
-// This is about making complex rice with a fix base rich
+/**
+ * The Decorator Pattern is a structural design pattern that lets you dynamically add new behavior to an object 
+ * without altering its structure or changing the original class.
+ * 
+ * Base behavior is defined in the original class.
+ * You "wrap" the object with decorators, which can modify the behavior by adding or changing functionality before or
+ * after delegating to the original class's methods.
+ * The base class remains unchanged, and you can apply multiple layers of decoration as needed.
+ */
 
+
+// This is about making complex rice with a fix base rich
 interface IRiceMaker {
-    
     cook(): string;
 
 }
 
-class BaseRice implements IRiceMaker{
+class BaseRice implements IRiceMaker {
 
-    public cook():string{
+    public cook(): string {
         return 'cooking rice';
     }
- }
+}
 
 
 /**
@@ -56,7 +65,7 @@ class ChickenRiceMaker extends RiceDecorator {
  * Decorators can execute their behavior either before or after the call to a
  * wrapped object.
  */
-class JiraRickMaker extends RiceDecorator{
+class JiraRickMaker extends RiceDecorator {
     public cook(): string {
         return `${super.cook()} + Jira`;
     }

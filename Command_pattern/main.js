@@ -1,3 +1,10 @@
+/**
+ * This is a command pattern
+ * This Decouple the object that invokes an operation from the one that knows how to perform it
+ * There we are encapuslating the request as an object
+ * This allows us to parameterize clients with queues, requests, and operations
+ */
+
 class Calculator { // this is suppose to be invoker
   constructor() {
     this.value = 0
@@ -92,9 +99,13 @@ class AddThenMultiplyCommand {
 
 
 const addc = new AddCommand(10);
+const addc2 = new AddCommand(10);
+
 const mac =new Calculator();
 
 mac.executeCommand(addc)
+mac.executeCommand(addc2)
+
 console.log(mac.value)
 
 
