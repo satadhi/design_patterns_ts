@@ -1,0 +1,1 @@
+// Use write a simple Generator function that is iterator  that Generator function returns an which has both interator and iterable
